@@ -1,0 +1,11 @@
+this is config
+CREATE TABLE SubOption (
+    subOptID VARCHAR(255) PRIMARY KEY,
+    itemName VARCHAR(255) NOT NULL,
+    salePrices DECIMAL(10,2),
+    posCode VARCHAR(255),
+    image VARCHAR(255),
+    tax ENUM('INCLUDED', 'EXCLUDED') NOT NULL,
+    optionItemID VARCHAR(255),
+    FOREIGN KEY (optionItemID) REFERENCES OptionItem(optionItemID)
+);
